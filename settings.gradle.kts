@@ -1,0 +1,1 @@
+rootProject.name = "pub_dev_version_fetcher"
