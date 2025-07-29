@@ -31,12 +31,10 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "251"
+            sinceBuild = "231"
         }
 
-        changeNotes = """
-            Initial version
-        """.trimIndent()
+        changeNotes = file("CHANGELOG.md").readText()
     }
 }
 
