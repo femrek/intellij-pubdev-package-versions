@@ -1,55 +1,51 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-  id("java")
-  id("org.jetbrains.kotlin.jvm") version "2.1.0"
-  id("org.jetbrains.intellij.platform") version "2.5.0"
+    id("java")
+    id("org.jetbrains.kotlin.jvm") version "2.1.0"
+    id("org.jetbrains.intellij.platform") version "2.5.0"
 }
 
 group = "me.femrek"
-version = "1.0-SNAPSHOT"
+version = "0.0.1"
 
 repositories {
-  mavenCentral()
-  intellijPlatform {
-    defaultRepositories()
-  }
+    mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
 dependencies {
-  intellijPlatform {
-    create("IC", "2025.1")
-    bundledPlugin("org.jetbrains.plugins.yaml")
-    testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
+    intellijPlatform {
+        create("IC", "2025.1")
+        bundledPlugin("org.jetbrains.plugins.yaml")
+        testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
+    }
 
-    // Add necessary plugin dependencies for compilation here, example:
-    // bundledPlugin("com.intellij.java")
-  }
-
-  implementation("org.json:json:20231013")
-  testImplementation(kotlin("test"))
+    implementation("org.json:json:20231013")
+    testImplementation(kotlin("test"))
 }
 
 
 intellijPlatform {
-  pluginConfiguration {
-    ideaVersion {
-      sinceBuild = "251"
-    }
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = "251"
+        }
 
-    changeNotes = """
-      Initial version
-    """.trimIndent()
-  }
+        changeNotes = """
+            Initial version
+        """.trimIndent()
+    }
 }
 
 tasks {
-  // Set the JVM compatibility versions
-  withType<JavaCompile> {
-    sourceCompatibility = "21"
-    targetCompatibility = "21"
-  }
-  withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = "21"
-  }
+    withType<JavaCompile> {
+        sourceCompatibility = "21"
+        targetCompatibility = "21"
+    }
+    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        compilerOptions.jvmTarget.set(JvmTarget.JVM_21)
+    }
 }

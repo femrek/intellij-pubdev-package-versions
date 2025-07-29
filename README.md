@@ -1,7 +1,17 @@
 # PubDev Version Completion Plugin for IntelliJ
 
 Provides intelligent code completion for Dart and Flutter `pubspec.yaml` files by suggesting the latest available
-versions of packages directly from pub.dev.
+versions of packages directly from [pub.dev](https://pub.dev).
+
+---
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+  - [Build from Source using Gradle](#1-build-from-source-using-gradle)
+  - [Install Plugin in IntelliJ](#2-install-plugin-in-intellij)
+- [Usage](#usage)
+- [License](#license)
 
 ---
 
@@ -17,7 +27,7 @@ versions of packages directly from pub.dev.
 
 ### 1. Build from Source using Gradle
 
-Make sure you have Java and Gradle installed.
+Make sure you have Java installed.
 
 ```bash
 ./gradlew buildPlugin
