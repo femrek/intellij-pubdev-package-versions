@@ -51,7 +51,7 @@ build/distributions/pubdev-version-completion-<version>.zip
 
 ## License
 
-MIT License — see LICENSE file.
+This project is licensed under the [Apache License 2.0](LICENSE).  
 
 ---
 
