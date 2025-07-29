@@ -33,7 +33,7 @@ jobs:
           ./gradlew buildPlugin
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: plugin-artifact
           path: build/distributions/*.zip
