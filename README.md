@@ -21,6 +21,8 @@ versions of packages directly from [pub.dev](https://pub.dev).
 - Also, shows **available versions**.
 - Supports version completions inside `dependencies` and `dev_dependencies` sections.
 
+![preview](/asset/preview.gif)
+
 ---
 
 ## Installation
