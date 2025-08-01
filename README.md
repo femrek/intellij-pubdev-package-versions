@@ -1,7 +1,8 @@
 # PubDev Version Completion Plugin for IntelliJ
 
-Provides intelligent code completion for Dart and Flutter `pubspec.yaml` files by suggesting the latest available
-versions of packages directly from [pub.dev](https://pub.dev).
+Provides code completion for Dart and Flutter `pubspec.yaml` files by suggesting the latest available
+versions of packages directly from [pub.dev](https://pub.dev). Also, list all versions of the Dart package 
+or Flutter plugin.
 
 ---
 
@@ -17,9 +18,9 @@ versions of packages directly from [pub.dev](https://pub.dev).
 
 ## Features
 
+- Supports version completions inside `dependencies` and `dev_dependencies` sections.
 - Suggests the **latest** version of a package when typing a dependency name.
 - Also, shows **available versions**.
-- Supports version completions inside `dependencies` and `dev_dependencies` sections.
 
 ![preview](/asset/preview.gif)
 
@@ -64,9 +65,3 @@ build/distributions/pubdev-version-completion-<version>.zip
 ## License
 
 This project is licensed under the [Apache License 2.0](LICENSE).  
-
----
-
-## Contributing
-
-Contributions or suggestions are welcome. Please open issues or pull requests.
