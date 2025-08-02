@@ -34,7 +34,8 @@ intellijPlatform {
             sinceBuild = "231"
         }
 
-        changeNotes = file("CHANGELOG.md").readText()
+        // Uncomment the following line to enable the plugin in the IDE
+        // changeNotes = file("CHANGELOG.md").readText()
     }
 }
 
