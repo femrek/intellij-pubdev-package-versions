@@ -34,7 +34,7 @@ intellijPlatform {
             sinceBuild = "231"
         }
 
-        // Uncomment the following line to enable the plugin in the IDE
+        // Uncomment the following line to enable 'what is new' section in the plugin page.
         // changeNotes = file("CHANGELOG.md").readText()
     }
 }
