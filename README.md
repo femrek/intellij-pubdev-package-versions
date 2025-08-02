@@ -20,9 +20,13 @@ or Flutter plugin.
 
 - Supports version completions inside `dependencies` and `dev_dependencies` sections.
 - Suggests the **latest** version of a package when typing a dependency name.
-- Also, shows **available versions**.
+- Also, shows **all versions**.
 
-![preview](/asset/preview.gif)
+### Latest version
+![preview](/asset/preview_1.gif)
+
+### All versions
+![preview](/asset/preview_2.gif)
 
 ---
 
