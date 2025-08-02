@@ -1,6 +1,5 @@
 package me.femrek.pub_dev_version_fetcher.completion
 
-
 import com.intellij.codeInsight.completion.CompletionParameters
 import com.intellij.codeInsight.completion.CompletionProvider
 import com.intellij.codeInsight.completion.CompletionResultSet
@@ -24,8 +23,10 @@ class PubDevVersionCompletionProvider : CompletionProvider<CompletionParameters>
 
                 // all versions
                 if (packageInfo.versions.isNotEmpty()) {
-                    priorityCounter++
                     for (version in packageInfo.versions) {
+                        // versions are sorted first version to last by the pub.dev api.
+                        // increasing counter puts the last version at the top of the popup.
+                        priorityCounter++
                         resultSet.addElement(
                             PrioritizedLookupElement.withPriority(
                                 LookupElementBuilder
