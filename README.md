@@ -19,7 +19,7 @@ or Flutter plugin.
 ## Features
 
 - Supports version completions inside `dependencies` and `dev_dependencies` sections.
-- Suggests the **latest** version of a package when typing a dependency name.
+- Suggests the **latest** version of a package when typing a dependency version.
 - Also, shows **all versions**.
 
 ### Latest version
