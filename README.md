@@ -32,7 +32,15 @@ or Flutter plugin.
 
 ## Installation
 
-### 1. Build from Source using Gradle
+### Install From Marketplace
+
+- Open **Settings** → **Plugins**.
+- Select the **Marketplace** tab.
+- Search [pub.dev Package Versions](https://plugins.jetbrains.com/plugin/28361-pub-dev-package-versions)
+
+### Build From Source
+
+#### 1. Build from Source using Gradle
 
 Make sure you have Java installed.
 
@@ -46,7 +54,7 @@ The build will create a plugin ZIP file at:
 build/distributions/pubdev-version-completion-<version>.zip
 ```
 
-### 2. Install Plugin in IntelliJ
+#### 2. Install Plugin in IntelliJ
 
 - Open IntelliJ IDEA.
 - Go to Settings (Preferences on macOS) → Plugins.
