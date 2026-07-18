@@ -1,8 +1,10 @@
 package me.femrek.pub_dev_version_fetcher.dto
 
+import me.femrek.pub_dev_version_fetcher.util.AppDateTimeUtil
+
 data class PackageVersionsDTO(
-    val latest: String,
-    val versions: List<String>
+    val latest: PackageVersionDTO,
+    val versions: List<PackageVersionDTO>
 ) {
     companion object {
         fun fromJson(json: String): PackageVersionsDTO {
@@ -11,12 +13,13 @@ data class PackageVersionsDTO(
             // versions
             val versions = jsonObject.getJSONArray("versions").let { map ->
                 List(map.length()) { i ->
-                    map.getJSONObject(i).getString("version")
+                    PackageVersionDTO.fromJson(map.getJSONObject(i))
                 }
             }
 
             // latest
-            val latest = jsonObject.getJSONObject("latest").getString("version")
+            val latestObj = jsonObject.getJSONObject("latest");
+            val latest = PackageVersionDTO.fromJson(latestObj)
             return PackageVersionsDTO(latest, versions)
         }
     }

@@ -30,8 +30,8 @@ class PubDevVersionCompletionProvider : CompletionProvider<CompletionParameters>
                         resultSet.addElement(
                             PrioritizedLookupElement.withPriority(
                                 LookupElementBuilder
-                                    .create(version)
-                                    .withTypeText("Version from pub.dev"),
+                                    .create(version.name)
+                                    .withTypeText(version.date),
                                 priorityCounter
                             )
                         )
@@ -42,10 +42,10 @@ class PubDevVersionCompletionProvider : CompletionProvider<CompletionParameters>
                 resultSet.addElement(
                     PrioritizedLookupElement.withPriority(
                         LookupElementBuilder
-                            .create("^${packageInfo.latest}")
+                            .create("^${packageInfo.latest.name}")
                             .withPresentableText("latest")
-                            .withLookupString("latest").withLookupString("^${packageInfo.latest}")
-                            .withTypeText("Caret Latest from pub.dev"),
+                            .withLookupString("latest").withLookupString("^${packageInfo.latest.name}")
+                            .withTypeText("${packageInfo.latest.name} | ${packageInfo.latest.date}"),
                         priorityCounter + 1
                     )
                 )
